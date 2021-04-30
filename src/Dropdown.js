@@ -3,7 +3,7 @@ import React from "react";
 const Dropdown = ({ icon, options }) => {
 	return (
 		<div className="dropdown">
-			<button>{icon}</button>
+			<button disabled={true}>{icon}</button>
 			<div className="content">
 				{options.map((option, index) => <DropdownOption key={`option-${index}`} option={option} />)}
 			</div>

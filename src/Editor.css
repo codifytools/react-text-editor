@@ -2,9 +2,10 @@
 	display: flex;
 }
 
-.editor .actions span {
+.editor .actions > span {
 	align-items: center;
 	background-color: lightgray;
+	color: #000;
 	cursor: pointer;
 	display: flex;
 	height: 28px;
@@ -14,8 +15,51 @@
 	width: 28px;
 }
 
-.editor .actions span svg {
+.editor .actions > span svg {
 	height: 20px;
+}
+
+.editor .actions .dropdown button {
+	align-items: center;
+	background-color: lightgray;
+	border: none;
+	color: #000;
+	cursor: pointer;
+	display: flex;
+	height: 28px;
+	justify-content: center;
+	margin-right: 3px;
+	padding: 0;
+	width: 28px;
+}
+
+.editor .actions .dropdown button svg {
+	height: 20px;
+}
+
+.editor .actions .content {
+	background-color: #f9f9f9;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	display: none;
+	position: absolute;
+	text-align: center;
+	width: 28px;
+	z-index: 1;
+}
+
+.editor .actions .content > span {
+	cursor: pointer;
+	display: block;
+	padding: 5px 0;
+	text-decoration: none;
+}
+
+.editor .actions .content span:hover {
+	background-color: #f1f1f1;
+}
+
+.editor .actions .dropdown:hover .content {
+	display: block;
 }
 
 .editor div.editable {
@@ -65,4 +109,9 @@
 
 .editor textarea:focus {
 	border-color: #333;
+}
+
+.editor .dropdown {
+	position: relative;
+	display: inline-block;
 }

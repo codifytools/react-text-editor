@@ -1,8 +1,10 @@
 import React, { useState, useRef } from "react";
-import { IconBold, IconItalic, IconUnderline, IconStrikethrough, IconOrderedList, IconUnorderedList, IconJustifyLeft, IconJustifyCenter, IconJustifyRight, IconQuote, IconLink, IconImage, IconEdit, IconCode } from "./Icons.js";
+import { IconBold, IconItalic, IconUnderline, IconStrikethrough, IconOrderedList, IconUnorderedList, IconTextSize, IconJustifyLeft, IconJustifyCenter, IconJustifyRight, IconQuote, IconLink, IconImage, IconEdit, IconCode } from "./Icons.js";
+import Dropdown from "./Dropdown.js";
+import Button from "./Button.js";
 import "./Editor.css";
 
-const TextEditor = ({ field, html, classes, saveCallback, placeholder }) => {
+const Editor = ({ field, html, classes, saveCallback, placeholder }) => {
 	const [htmlEditor, setHtmlEditor] = useState(false);
 	const editorRef = useRef();
 
@@ -45,6 +47,16 @@ const TextEditor = ({ field, html, classes, saveCallback, placeholder }) => {
 
 				<Button cmd="insertOrderedList" icon={IconOrderedList} />
 				<Button cmd="insertUnorderedList" icon={IconUnorderedList} />
+
+				<Dropdown
+					icon={<IconTextSize />}
+					options={[
+						{ cmd: "formatBlock", text: "H1", arg: "h1"},
+						{ cmd: "formatBlock", text: "H2", arg: "h2"},
+						{ cmd: "formatBlock", text: "H3", arg: "h3"},
+						{ cmd: "formatBlock", text: "H4", arg: "h4"}
+					]}
+				/>
 
 				<Button cmd="justifyLeft" icon={IconJustifyLeft} />
 				<Button cmd="justifyCenter" icon={IconJustifyCenter} />
@@ -91,13 +103,4 @@ const TextEditor = ({ field, html, classes, saveCallback, placeholder }) => {
 	);
 };
 
-const Button = ({ icon: RenderIcon, cmd, arg, func }) => {
-	const handleClick = (event) => {
-		event.preventDefault();
-		func ? func() : document.execCommand(cmd, false, arg);
-	};
-
-	return <span onMouseDown={handleClick}><RenderIcon /></span>;
-};
-
-export default TextEditor;
+export default Editor;

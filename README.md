@@ -2,6 +2,11 @@
 
 A small, simple and customizable text editor for React applications.
 
+![npm bundle size](https://img.shields.io/bundlephobia/min/@codifytools/react-text-editor)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/@codifytools/react-text-editor)
+[![npm downloads](https://img.shields.io/npm/dt/@codifytools/react-text-editor)](https://www.npmjs.com/package/@codifytools/react-text-editor)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE)
+
 ## Table of Contents
 
 * [Installation](#installation)

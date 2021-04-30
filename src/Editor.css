@@ -1,20 +1,21 @@
 .editor .actions {
-	margin: 5px 0 10px 0;
+	display: flex;
 }
 
 .editor .actions span {
+	align-items: center;
 	background-color: lightgray;
 	cursor: pointer;
-	display: inline-block;
-	font-size: 13px;
+	display: flex;
+	height: 28px;
+	justify-content: center;
 	margin: 0 3px 3px 0;
 	text-align: center;
+	width: 28px;
 }
 
 .editor .actions span svg {
-	height: 21px;
-	padding: 4px;
-	vertical-align: top;
+	height: 20px;
 }
 
 .editor div.editable {
@@ -23,8 +24,8 @@
 	cursor: text;
 	display: block;
 	font-weight: 400;
-	min-height: 100px;
 	margin-bottom: 10px;
+	min-height: 100px;
 	outline: none;
 	padding: 5px;
 	width: 100%;

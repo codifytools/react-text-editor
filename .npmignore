@@ -1,5 +1,7 @@
 .storybook
 src
+node_modules
 
 *.tgz
+*.yml
 rollup.config.js

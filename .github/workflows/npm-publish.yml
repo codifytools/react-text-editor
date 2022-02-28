@@ -5,7 +5,7 @@ on:
     branches:
       - master
 
-jobs
+jobs:
   npm-publish:
     name: npm-publish
     runs-on: ubuntu-latest

@@ -1,6 +1,6 @@
 {
   "name": "@codifytools/react-text-editor",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A small, simple and customizable text editor for React applications.",
   "main": "dist/Editor.cjs.js",
   "module": "dist/Editor.esm.js",

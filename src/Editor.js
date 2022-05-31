@@ -74,7 +74,7 @@ const Editor = ({ field, html, classes, saveCallback, placeholder }) => {
 
         <Button icon={IconImage} func={() => {
           const imageUrl = prompt("Paste image url here");
-          document.execCommand("insertHTML", false, `<img src="${imageUrl}">`);
+          if (imageUrl) document.execCommand("insertHTML", false, `<img src="${generateLink(imageUrl)}">`);
         }} />
 
         <span onClick={toggleHtmlEditor}>
